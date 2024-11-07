@@ -1,7 +1,5 @@
 #include "services.h"
 
-#include <windows.h>
-
 MMSignedPoint GetMousePos() {
 #if defined(IS_MACOSX)
 	CGEventRef event = CGEventCreate(NULL);
