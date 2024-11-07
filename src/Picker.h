@@ -1,14 +1,15 @@
 #pragma once
+
+#include <string>
 #include <napi.h>
 
 #ifdef _WIN32
-  #define WIN32_LEAN_AND_MEAN
-  #include <Windows.h>
-  #include "windows/Picker.h"
+    #include "./windows/WinPicker.h"
 #endif
 
-namespace addon {
+namespace picker {
     Napi::Value Init(const Napi::CallbackInfo& info);
+    COLORREF GetColor();
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports);

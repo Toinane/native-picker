@@ -4,8 +4,9 @@
   "description": "A native picker for Windows and MacOS",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node-gyp rebuild",
     "build": "node-gyp rebuild",
-    "install": "node-gyp rebuild",
+    "rebuild:dev": "node-gyp rebuild --debug",
     "clean": "node-gyp clean",
     "test": "node ./test.js"
   },
@@ -19,12 +20,11 @@
     "url": "https://github.com/Toinane/native-picker/issues"
   },
   "homepage": "https://github.com/Toinane/native-picker#readme",
-  "dependencies": {
-    "bindings": "^1.5.0",
-    "node-addon-api": "^3.0.0"
+  "engines": {
+    "node": ">= 16"
   },
-  "gypfile": true,
-  "devDependencies": {
-    "node-gyp": "^6.1.0"
-  }
+  "dependencies": {
+    "node-addon-api": "^4.2.0"
+  },
+  "gypfile": true
 }

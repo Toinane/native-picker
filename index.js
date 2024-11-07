@@ -1,3 +1,3 @@
-const picker = require('bindings')('picker');
+const picker = require("./build/Release/picker");
 
 module.exports = picker;
